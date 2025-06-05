@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+  HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -67,7 +67,7 @@ class HomePage extends StatelessWidget {
 }
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+  HomeScreen({super.key});
 
   @override
   _HomeScreenState createState() => _HomeScreenState();
@@ -116,7 +116,7 @@ class _HomeScreenState extends State<HomeScreen> {
 //--------------------------------------------------------------------------------------
 //// Search Input text.....
 class SeachInput extends StatefulWidget {
-  const SeachInput({super.key});
+  SeachInput({super.key});
 
   @override
   _TextViewEx createState() => _TextViewEx();
@@ -166,7 +166,7 @@ class _TextViewEx extends State<SeachInput> {
 //--------------------------------------------------------------------------------------
 //// Category Section .....
 class CategorySection extends StatefulWidget {
-  const CategorySection({super.key});
+  CategorySection({super.key});
 
   @override
   _CategoryItems createState() => _CategoryItems();
@@ -197,7 +197,7 @@ class _CategoryItems extends State<CategorySection> {
               return InkWell(
                 child: Card(
                   color: Colors.white,
-                  shadowColor: const Color.fromARGB(255, 213, 207, 207),
+                  shadowColor: Color.fromARGB(255, 213, 207, 207),
                   elevation: 4,
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,

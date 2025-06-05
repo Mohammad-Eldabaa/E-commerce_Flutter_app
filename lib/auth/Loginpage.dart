@@ -9,7 +9,7 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class LoginPage extends StatefulWidget {
-  const LoginPage({super.key});
+  LoginPage({super.key});
 
   @override
   _LoginPageState createState() => _LoginPageState();
@@ -85,12 +85,7 @@ class _LoginPageState extends State<LoginPage> {
                   Shadow(
                     offset: Offset(5, 5), // X, Y position
                     blurRadius: 4.0, // Softness of the shadow
-                    color: const Color.fromARGB(
-                      255,
-                      226,
-                      224,
-                      224,
-                    ), // Shadow color
+                    color: Color.fromARGB(255, 226, 224, 224), // Shadow color
                   ),
                 ],
                 fontWeight: FontWeight.bold,

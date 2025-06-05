@@ -6,7 +6,7 @@ import 'package:google_fonts/google_fonts.dart';
 class Showproduct extends StatefulWidget {
   final Product product;
 
-  const Showproduct({super.key, required this.product});
+  Showproduct({super.key, required this.product});
 
   @override
   State<Showproduct> createState() => _ShowproductState();
@@ -18,7 +18,7 @@ class _ShowproductState extends State<Showproduct> {
       PurchaseCard().addProduct(widget.product);
     });
     ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(
+      SnackBar(
         content: Text('Product added to cart'),
         duration: Duration(milliseconds: 1000),
       ),
@@ -35,7 +35,7 @@ class _ShowproductState extends State<Showproduct> {
         backgroundColor: Colors.white,
         title: Text(
           product.name,
-          style: const TextStyle(
+          style: TextStyle(
             fontSize: 24,
             fontWeight: FontWeight.bold,
             color: Color(0xFFFFA451),
@@ -43,7 +43,7 @@ class _ShowproductState extends State<Showproduct> {
         ),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: EdgeInsets.all(16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -53,7 +53,7 @@ class _ShowproductState extends State<Showproduct> {
                 height: 250,
                 fit: BoxFit.cover,
                 errorBuilder: (context, error, stackTrace) {
-                  return const Icon(
+                  return Icon(
                     Icons.broken_image,
                     size: 200,
                     color: Color.fromARGB(255, 247, 191, 139),
@@ -61,16 +61,16 @@ class _ShowproductState extends State<Showproduct> {
                 },
               ),
             ),
-            const SizedBox(height: 50),
-            const SizedBox(height: 20),
+            SizedBox(height: 50),
+            SizedBox(height: 20),
             Text(
               product.description,
-              style: const TextStyle(fontSize: 22, color: Color(0xff27214D)),
+              style: TextStyle(fontSize: 22, color: Color(0xff27214D)),
             ),
-            const SizedBox(height: 20),
+            SizedBox(height: 20),
             Text(
               product.price.toStringAsFixed(2),
-              style: const TextStyle(fontSize: 20, color: Colors.green),
+              style: TextStyle(fontSize: 20, color: Colors.green),
             ),
 
             Row(
@@ -115,12 +115,12 @@ class _ShowproductState extends State<Showproduct> {
                 ),
               ],
             ),
-            const Spacer(),
+            Spacer(),
             SizedBox(height: 20),
             Center(
               child: ElevatedButton.icon(
                 onPressed: addProductToCart,
-                icon: const Icon(Icons.add_shopping_cart, color: Colors.white),
+                icon: Icon(Icons.add_shopping_cart, color: Colors.white),
                 label: Text(
                   'Add to Cart',
                   style: GoogleFonts.aBeeZee(
@@ -130,15 +130,12 @@ class _ShowproductState extends State<Showproduct> {
                   ),
                 ),
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color(0xFFFFA451),
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 24,
-                    vertical: 12,
-                  ),
+                  backgroundColor: Color(0xFFFFA451),
+                  padding: EdgeInsets.symmetric(horizontal: 24, vertical: 12),
                 ),
               ),
             ),
-            const SizedBox(height: 60),
+            SizedBox(height: 60),
           ],
         ),
       ),

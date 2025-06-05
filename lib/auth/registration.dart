@@ -8,7 +8,7 @@ import 'package:http/http.dart' as http;
 // import 'package:image_picker/image_picker.dart';
 
 class RegistrationScreen extends StatelessWidget {
-  const RegistrationScreen({super.key});
+  RegistrationScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +29,7 @@ class RegistrationScreen extends StatelessWidget {
 }
 
 class Registration extends StatefulWidget {
-  const Registration({super.key});
+  Registration({super.key});
 
   @override
   _RegistrationState createState() => _RegistrationState();
@@ -61,13 +61,6 @@ class _RegistrationState extends State<Registration> {
     }
 
     void registerRequest() async {
-      print(
-        "now"
-                " " +
-            userRegister.firstName +
-            " " +
-            userRegister.address,
-      );
       try {
         final url = Uri.parse("https://ib.jamalmoallart.com/api/v2/register");
 
@@ -119,12 +112,7 @@ class _RegistrationState extends State<Registration> {
                   Shadow(
                     offset: Offset(5, 5), // X, Y position
                     blurRadius: 4.0, // Softness of the shadow
-                    color: const Color.fromARGB(
-                      255,
-                      226,
-                      224,
-                      224,
-                    ), // Shadow color
+                    color: Color.fromARGB(255, 226, 224, 224), // Shadow color
                   ),
                 ],
 
@@ -144,12 +132,7 @@ class _RegistrationState extends State<Registration> {
                     children: [
                       CircleAvatar(
                         radius: 60,
-                        backgroundColor: const Color.fromARGB(
-                          255,
-                          239,
-                          237,
-                          237,
-                        ),
+                        backgroundColor: Color.fromARGB(255, 239, 237, 237),
                         backgroundImage: _avatar != null
                             ? FileImage(_avatar!)
                             : null,
@@ -419,7 +402,7 @@ class _TextViewEx extends State<TextExample> {
 // DatePickerDialog
 
 class DatePickerDialogExample extends StatefulWidget {
-  const DatePickerDialogExample({super.key});
+  DatePickerDialogExample({super.key});
 
   @override
   _DatePickerDialogExampleState createState() =>

@@ -15,6 +15,7 @@ class PurchaseCard {
       _card[index].stock++;
     } else {
       _card.add(product);
+      _card[index].stock++;
     }
   }
 

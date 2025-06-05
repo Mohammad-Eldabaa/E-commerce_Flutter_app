@@ -47,7 +47,9 @@ class _ProfileState extends State<Profile> {
           children: [
             CircleAvatar(
               radius: 60,
-              backgroundImage: NetworkImage('https://i.pravatar.cc/150?img=2'),
+              backgroundImage: NetworkImage(
+                'https://static.vecteezy.com/system/resources/previews/000/439/863/large_2x/vector-users-icon.jpg',
+              ),
             ),
             SizedBox(height: 20),
             Text(
